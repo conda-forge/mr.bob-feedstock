@@ -1,6 +1,6 @@
 {% set name = "mr.bob" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "6737eaf98aaeae85e07ebef844ee5156df2f06a8b28d7c3dcb056f811c588121" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "11c964b50550e8d38af586101636eb0b025360acb3b4c52fe75cf551dcf97106" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1006
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   host:
